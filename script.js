@@ -10,21 +10,52 @@ function book(title,author,pages,read){
 function addbookToLibrary(title,author,pages,read){
     let Book = new book(title,author,pages,read);
     myLibrary.push(Book);
+  
 }
-
+let index=0;
 function display(){
+   
+      
+     
     const books = document.querySelector('.Books');
      myLibrary.forEach (myLibrary => {
      const div = document.createElement("div");
+     const  btn=document.createElement('button');
+     btn.setAttribute("id", "btn");
+     btn.textContent="remove";
+     btn.classList.add="remove"
+     index++;
+     btn.addEventListener('click',()=>{
+        console.log("hu")
+       myLibrary.splice(1,1);
+       print();
+
+     });
+     btn.classList.add="remove";
+     div.style.backgroundColor="white";
+     div.style.height="300px";
+     div.style.width="200px";
+     div.style.fontFamily= 'Courier New';
+     div.style.padding="10px";
+     div.style.margin="10px";
+
+
      div.classList.add("card");
      books.appendChild(div);
+     div.appendChild(btn);
+     
      for (let key in myLibrary){
         console.log(`${key}: ${myLibrary[key]}`)
         const para = document.createElement('p');
+        para.style.fontSize="30px";
         para.textContent=(`${key}: ${myLibrary[key]}`);
         div.appendChild(para);
      }
     })
+    console.log(index);
+   
+    
+
 }
 let flag=0;
 function myFunction() {
@@ -41,20 +72,23 @@ function myFunction() {
     }
    
         addbookToLibrary(Title,Author,Pages,Read);
-    
+       
    
 
 
   display();
+  Myreset();
+  
 
 }
+
 function Myreset(){
     myLibrary= [];
 }
 function displayform(){
      document.querySelector(".content").style.display ="";
 }
-
+// const mybtn=document.getElementById("#btn");
 
 
 

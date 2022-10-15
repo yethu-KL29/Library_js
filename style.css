@@ -2,9 +2,26 @@
   background-color: antiquewhite;  
   height: 250px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+
+}.btn1{
+  height: 50px;
+  width: 100px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 80px;
+  border-radius: 20px;
 }
-button{
- 
+.add{
+  height: 50px;
+  width: 100px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 80px;
+  border-radius: 20px;
 }
 .top{
   display: grid;

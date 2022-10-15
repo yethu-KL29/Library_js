@@ -10,7 +10,8 @@
 <body>
     <div class="container">
      
-        <div class="content" id="content" style="display:none;">
+       <div class="content" id="content" style="display:none" > 
+       
             <form action="#" method="get">
                 <label for="Title">Title</label>
                 <input type="text" id="Title" required>
@@ -20,13 +21,13 @@
                 <input type="text" id="pages" required>
                 <label for="read?">read?</label>
                 <input type="text" id="read"required>
-                <button type="submit" onclick="myFunction()">SUBMIT</button>
-                <button type="reset" onclick="Myreset()">RESET</button>
+                <button class="btn1" type="submit" onclick="myFunction()">SUBMIT</button>
+                <button class="btn1" type="reset" onclick="Myreset()">RESET</button>
             </form>
         </div>
         <div class="header">
             <h1>ADD NEW LIBRARY</h1>
-          <button onclick="displayform()">ADD+</button>
+          <button class="add" onclick="displayform()">ADD+</button>
         </div>
         <div class="Books">
       
